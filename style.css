@@ -1,3 +1,187 @@
+/* Globales Dark Theme für die gesamte Seite */
+
+/* Modernes, horizontales Navigationsmenü */
+nav {
+	background: none;
+	border-bottom: 2.5px solid #5a1010;
+	box-shadow: none;
+	padding: 0;
+	margin-bottom: 32px;
+}
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 18px;
+	list-style: none;
+	margin: 0;
+	padding: 0 32px 0 0;
+}
+nav ul li {
+	margin: 0;
+	padding: 0;
+}
+nav ul li a {
+	display: inline-block;
+	padding: 6px 16px;
+	border-radius: 0;
+	background: linear-gradient(90deg, #5a1010 70%, #7a1a1a 100%);
+	color: #fff6b0 !important;
+	font-weight: 700;
+	font-size: 1.02rem;
+	letter-spacing: 0.1px;
+	text-decoration: none;
+	box-shadow: none;
+	transition: all 0.18s cubic-bezier(0.4,0,0.2,1);
+	border: none;
+	position: relative;
+}
+nav ul li a:hover, nav ul li.current-menu-item a, nav ul li.current_page_item a {
+	background: linear-gradient(90deg, #fff6b0 80%, #fffbe0 100%);
+	color: #a10000 !important;
+	font-weight: 900;
+	text-shadow: 0 0 8px #fffbe0, 0 0 2px #ffdb70;
+	transform: none;
+	box-shadow: none;
+}
+nav ul li.menu-item-has-children > a:after {
+	content: '\25BC';
+	font-size: 0.7em;
+	margin-left: 8px;
+	vertical-align: middle;
+}
+nav ul li ul {
+	display: none;
+	position: absolute;
+	background: #23232b;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px #5a101033;
+	margin-top: 8px;
+	min-width: 180px;
+	z-index: 100;
+	flex-direction: column;
+	padding: 8px 0;
+}
+nav ul li:hover > ul,
+nav ul li:focus-within > ul {
+	display: flex;
+}
+nav ul li ul li a {
+	background: none;
+	color: #fff6b0 !important;
+	padding: 10px 22px;
+	border-radius: 0;
+	box-shadow: none;
+	font-size: 1rem;
+}
+nav ul li ul li a:hover {
+	background: #5a1010;
+	color: #ffdb70 !important;
+	transform: none;
+}
+@media (max-width: 900px) {
+	nav ul {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+		padding: 0;
+	}
+	nav ul li a {
+		border-radius: 0;
+		margin-bottom: 2px;
+		width: 100%;
+		text-align: left;
+		padding: 10px 16px;
+	}
+}
+body {
+	background: #181818;
+	color: #ffe066;
+}
+
+a, a:visited {
+	color: #ffb347;
+}
+a:hover, a:focus {
+	color: #ffe066;
+	text-shadow: 0 0 2px #7a1a1a;
+}
+
+input, textarea, select, button {
+	background: #222;
+	color: #ffe066;
+	border: 1px solid #7a1a1a;
+	box-shadow: 0 1px 6px rgba(122,26,26,0.18);
+	font-size: 0.92rem;
+	padding: 6px 10px;
+	border-radius: 4px;
+	line-height: 1.2;
+}
+
+table {
+	background: #222;
+	color: #ffe066;
+	border: 1px solid #7a1a1a;
+}
+th, td {
+	border-color: #7a1a1a;
+}
+
+hr {
+	border-color: #7a1a1a;
+}
+
+.dashicons {
+	color: #c0392b;
+}
+
+/* Bestehende Playlist-spezifische Dark Theme-Regeln bleiben erhalten */
+/* Dark Theme Anpassungen für DBP Music Theme */
+.dbp-playlist-player[data-theme="dark"] {
+	background: #1a1a1a;
+	border: 1px solid #7a1a1a;
+	color: #ffe066;
+	box-shadow: 0 2px 12px rgba(122,26,26,0.25);
+}
+.dbp-playlist-player[data-theme="dark"] .dbp-playlist-header {
+	border-bottom: 2px solid #7a1a1a;
+}
+.dbp-playlist-player[data-theme="dark"] .dbp-playlist-title,
+.dbp-playlist-player[data-theme="dark"] .dbp-playlist-meta,
+.dbp-playlist-player[data-theme="dark"] .dbp-current-track-title,
+.dbp-playlist-player[data-theme="dark"] .dbp-current-track-artist,
+.dbp-playlist-player[data-theme="dark"] .dbp-track-title,
+.dbp-playlist-player[data-theme="dark"] .dbp-track-artist,
+.dbp-playlist-player[data-theme="dark"] .dbp-track-duration {
+	color: #ffe066;
+}
+.dbp-playlist-player[data-theme="dark"] .dbp-playlist-tracklist {
+	border-top: 2px solid #7a1a1a;
+}
+.dbp-playlist-player[data-theme="dark"] .dbp-playlist-track:hover {
+	background: #2a1a1a;
+}
+.dbp-playlist-player[data-theme="dark"] .dbp-playlist-track.active {
+	background: #3a1a1a;
+}
+.dbp-playlist-player[data-theme="dark"] .dbp-track-meta-table {
+	background: #2a1a1a;
+	border: 1px solid #7a1a1a;
+	box-shadow: 0 1px 6px rgba(122,26,26,0.18);
+}
+.dbp-playlist-player[data-theme="dark"] .dbp-track-meta-table td {
+	color: #ffe066;
+	border-right: 1px solid #7a1a1a;
+}
+.dbp-playlist-player[data-theme="dark"] .dbp-track-meta-table td:last-child {
+	border-right: none;
+}
+.dbp-track-meta-table i.dashicons {
+	font-size: 15px;
+	color: #c0392b;
+	margin-right: 2px;
+}
 /*
 Theme Name: DBP Music Theme
 Theme URI: https://example.com/

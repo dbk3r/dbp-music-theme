@@ -1,4 +1,8 @@
 <?php
+// Stylesheet einbinden
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style('dbp-music-theme-style', get_stylesheet_uri());
+});
 // Basis-Theme Funktionen
 // Hier können später eigene Funktionen ergänzt werden.
 
