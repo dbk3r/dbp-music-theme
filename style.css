@@ -1,3 +1,11 @@
+.woocommerce-cart,
+.woocommerce .cart,
+.woocommerce-checkout,
+.woocommerce .checkout {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* Globales Dark Theme für die gesamte Seite */
 
 /* Modernes, horizontales Navigationsmenü */
